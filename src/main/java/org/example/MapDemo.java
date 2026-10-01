@@ -65,5 +65,8 @@ public class MapDemo {
 
         System.out.println("numsMapList: " + numsMapList);
         System.out.println("Map hashcode: "+ numsMapList.hashCode() );
+
+        users.remove(5);
+        System.out.println("users: " + users);
     }
 }
