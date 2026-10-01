@@ -3,7 +3,6 @@ package org.example;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Occurence {
 
@@ -80,7 +79,7 @@ public class Occurence {
 
         String str4 = "banana";
 
-        Map<String, Long>  frequency = Arrays.stream(str4.split(""))
+        Map<String, Long> frequency = Arrays.stream(str4.split(""))
                 .collect(Collectors.groupingBy(Function.identity(),LinkedHashMap::new, Collectors.counting()));
 
         System.out.println("frequency: " + frequency);
