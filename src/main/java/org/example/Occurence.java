@@ -56,7 +56,7 @@ public class Occurence {
 
         Optional<Integer> leastRepeatedInt = nums4.stream()
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
-                .entrySet().stream().min(Map.Entry.comparingByValue())
+                .entrySet().stream().min((x,y) -> x.getValue().compareTo(y.getValue()))
                 .map(Map.Entry::getKey);
 
         System.out.println("leastRepeatedInt: " +  leastRepeatedInt);
